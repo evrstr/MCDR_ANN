@@ -71,8 +71,9 @@ def on_load(server, old):
 
 # 玩家加入提示
 def on_player_joined(server, player):
-    server.say("[§e温馨提示§f] §b玩家 §e{} §b加入游戏".format(player))
-    server.execute('execute at @a run playsound minecraft:entity.arrow.hit_player player @a')
+    if on_player_join:
+        server.say("[§e温馨提示§f] §b玩家 §e{} §b加入游戏".format(player))
+        server.execute('execute at @a run playsound minecraft:entity.arrow.hit_player player @a')
 
 
 def on_info(server, info):
