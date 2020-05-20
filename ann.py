@@ -150,6 +150,10 @@ def on_unload(server):
     saveJson()
 
 
+def on_unload(server, old):
+    server.add_help_message('!!ann', '定时公告插件帮助')
+    
+
 def saveJson():
     with open(json_filename, 'w') as f:
         json.dump(ann_list, f, indent=4)
