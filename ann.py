@@ -150,7 +150,7 @@ def on_unload(server):
     saveJson()
 
 
-def on_unload(server, old):
+def on_load(server, old):
     server.add_help_message('!!ann', '定时公告插件帮助')
     
 
